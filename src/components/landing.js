@@ -1,27 +1,26 @@
 import React from 'react';
 
 
-
-
 function Landing(props) {
-    
-    return (
-        <div className="container-fluid d-flex justify-content-center" id="section-main">
-                <div className="container mt-3 " id="courousel-section" >
-                    <div className="recent-carousel">
-                        <ItemCard/>
-                        <ItemCard/>
-                        <ItemCard/>
-                        <ItemCard/>
-                        <ItemCard/>
-                        <ItemCard/>
-                        <ItemCard/>
-                        <ItemCard/>
-                        <ItemCard/>
-                        <ItemCard/>
-                        <ItemCard/>
-                    </div>
 
+    return (
+        <div className="container-fluid d-flex justify-content-center" id="recent-orders">
+                <div className="wrapper">
+                    <div className="container-fluid" id="corousel-section" >
+                        <div style={{fontSize:"25px",textTransform:"uppercase",fontWeight:"bold"}} className="mb-2">most frequently ordered</div>
+                        <div className="recent-carousel">
+                            <ItemCard/>
+                            <ItemCard/>
+                            <ItemCard/>
+                            <ItemCard/>
+                            <ItemCard/>
+                            <ItemCard/>
+                            <ItemCard/>
+                            <ItemCard/>
+                            <ItemCard/>
+                            
+                        </div>
+                    </div>
                 </div>
         </div>
     );
@@ -29,7 +28,7 @@ function Landing(props) {
 
 function ItemCard(props){
     return(
-        <div className="card mr-2">
+        <div className="card" style={{marginLeft:"40px"}}>
              <div className="card-body p-0 m-0">
                  <div className="col-12 p-0">
                       <div className="row-10 d-flex justify-content-center ">

@@ -1,10 +1,14 @@
 $(document).ready(function(){
     $(".recent-carousel").slick({
         infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 3,
+        slidesToScroll:3,
         centerMode: true,
-        centerPadding: '60px',
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        margin: '30px',
+        centerPadding: '140px',
         responsive: [
             {
               breakpoint: 768,
