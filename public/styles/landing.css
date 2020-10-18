@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+}
+
+#section-main{
+    background-color: #fff7f4;
+    /* background-color: #000; */
+    height: 100%;
+}
