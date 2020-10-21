@@ -43,3 +43,13 @@
     border-radius: 50%;
     background-color: #fff;
 }
+
+.slick-slide {
+    margin: 0 15px 0 15px;
+  }
+
+@media only screen and (max-width: 416px){
+    #results_header{
+        display: none;
+    }
+}

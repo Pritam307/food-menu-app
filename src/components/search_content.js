@@ -9,12 +9,15 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Chip from '@material-ui/core/Chip';
 import InputLabel from '@material-ui/core/InputLabel';
+import ItemCard from './itemCard';
 
 function SearchSection(props) {
 
   const useStyles = makeStyles({
     root: {
       width: 300,
+      marginTop: 15,
+      marginBottom: 10
     },
   });
 
@@ -71,7 +74,7 @@ function SearchSection(props) {
                 <div className="container-fluid">
 
                     <div className="row bg-transparent">
-                        <div className="col-2 border-bottom py-3">
+                        <div className="col-md-2 border-bottom py-3">
                            <div className="row p-0 m-0">
                                <div className="col d-flex justify-content-start p-0">
                                     <div className="card-text text-uppercase font-weight-bold " style={{fontSize:"20px"}}>filters</div>
@@ -81,13 +84,13 @@ function SearchSection(props) {
                                </div>
                            </div>
                         </div>
-                        <div className="col-10 border-bottom d-flex align-items-center">
-                            <div className="card-text text-uppercase font-weight-bold " style={{fontSize:"20px"}}>results(14)</div>
+                        <div className="col-md-10 border-bottom d-flex align-items-center">
+                            <div className="card-text text-uppercase font-weight-bold" id="results_header" style={{fontSize:"20px"}}>results(14)</div>
                         </div>
                     </div>
                     
                     <div className="row">
-                        <div className="col-2 border-right">
+                        <div className="col-md-2 border-right">
 
                             {/* Filters */}
                             <div class="accordion" id="filteraccordion">
@@ -98,7 +101,7 @@ function SearchSection(props) {
                                         </div>
                                     </div>
                                     <div className="col d-flex justify-content-end align-items-center">
-                                        <div data-toggle="collapse" data-target="#collapseFilter" aria-expanded="true" aria-controls="collapseFilter" onClick={toggleFilterArrow}>
+                                        <div data-toggle="collapse" data-target="#collapseFilter" aria-expanded="true" style={{cursor:"pointer"}} aria-controls="collapseFilter" onClick={toggleFilterArrow}>
                                             {
                                                 filterArrowState?<ChevronDownIcon />:<ChevronUpIcon/>
                                             }
@@ -255,17 +258,47 @@ function SearchSection(props) {
                             </div>           
                           
                         </div>
-                        <div className="col-10">
+                        <div className="col-md-10">
                             <div className="row mt-2">
-                                <div className="col-7 d-flex justify-content-start align-items-center">
+                                <div className="col-md-7 d-flex justify-content-start align-items-center">
                                     <SelectionChips/>
                                 </div>
-                                <div className="col-5 d-flex justify-content-end">
+                                <div className="col-md-5 d-flex justify-content-end align-items-center">
                                     <SortBySection/>
                                 </div>
                             </div>
                             <div className="card-section">
-                                
+
+                                <div className="row mt-4">
+                                    <div className="col-md-3 mb-md-0 mb-3">
+                                        <ItemCard usage={'mainPart'}/>
+                                    </div>
+                                    <div className="col-md-3 mb-md-0 mb-3">
+                                        <ItemCard usage={'mainPart'}/>
+                                    </div>
+                                    <div className="col-md-3 mb-md-0 mb-3">
+                                        <ItemCard usage={'mainPart'}/>
+                                    </div>
+                                    <div className="col-md-3 mb-md-0 mb-3">
+                                        <ItemCard usage={'mainPart'}/>
+                                    </div>
+                                </div>
+
+                                <div className="row mt-3">
+                                    <div className="col-md-3 mb-md-0 mb-3">
+                                        <ItemCard usage={'mainPart'}/>
+                                    </div>
+                                    <div className="col-md-3 mb-md-0 mb-3">
+                                        <ItemCard usage={'mainPart'}/>
+                                    </div>
+                                    <div className="col-md-3 mb-md-0 mb-3">
+                                        <ItemCard usage={'mainPart'}/>
+                                    </div>
+                                    <div className="col-md-3 mb-md-0 mb-3">
+                                        <ItemCard usage={'mainPart'}/>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -281,8 +314,7 @@ function SortBySection(props){
 
     const useStyles = makeStyles((theme) => ({
         formControl: {
-          margin: theme.spacing(1),
-          minWidth: 250,
+          minWidth: 280,
         },
         selectEmpty: {
           marginTop: theme.spacing(2),
@@ -297,11 +329,11 @@ function SortBySection(props){
     };
 
     return(
-        <div className="row w-75">
-            <div className="col-3 px-0 d-flex align-items-center justify-content-end">
-                <div className="card-text text-end font-weight-bold">Sort by:</div>
+        <div className="row w-100 m-0">
+            <div className="col-md-4 px-0 d-flex align-items-center justify-content-md-end justify-content-start">
+                <div className="card-text text-end font-weight-bold mt-md-0 mt-4">Sort by:</div>
             </div>
-            <div className="col-9 px-0 d-flex align-items-center justify-content-end">
+            <div className="col-md-8 px-0 d-flex align-items-center justify-content-md-end justify-content-center">
                 <FormControl variant="outlined" className={classes.formControl}>
                 {/* <InputLabel id="demo-simple-select-label">Age</InputLabel> */}
                     <Select
@@ -361,5 +393,6 @@ function SelectionChips(props){
         </div>
     )
 }
+
 
 export default SearchSection;
