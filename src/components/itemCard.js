@@ -1,5 +1,4 @@
 import React from 'react';
-import {StarFillIcon} from '@primer/octicons-react';
  
 
 function ItemCard(props){   
@@ -8,7 +7,7 @@ function ItemCard(props){
              <div className="card-body p-0 m-0">
                  <div className="col-12 p-0">
                       <div className="row-10 d-flex justify-content-center ">
-                        <img className="image-fluid" src="./images/recent_food_img_1.jpg" style={{width:"100%",height:"150px"}}/>
+                        <img className="image-fluid" src={props.image} style={{width:"100%",height:"150px"}}/>
                       </div>
                       {
                           props.usage === 'mainPart'?

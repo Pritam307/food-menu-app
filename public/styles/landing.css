@@ -25,8 +25,8 @@
 .slick-arrow.slick-prev:before{
     content:'\2190';
     color:red;
-    font-size: 28px;
-    border: 2px solid red;
+    font-size: 20px;
+    border: 3px solid red;
     border-radius: 50%;
     background-color: #fff;
 }
@@ -38,8 +38,8 @@
 .slick-arrow.slick-next:before{
     content:'\2192';
     color:red;
-    font-size: 28px;
-    border: 2px solid red;
+    font-size: 20px;
+    border: 3px solid red;
     border-radius: 50%;
     background-color: #fff;
 }

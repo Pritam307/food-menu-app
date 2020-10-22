@@ -67,6 +67,20 @@ function SearchSection(props) {
     setOccasionArrow(!occasionArrowState)
   }
 
+  const display_images=[
+      './images/showcase_images/img1.jpeg',
+      './images/showcase_images/img2.jpeg',
+      './images/showcase_images/img3.jpeg',
+      './images/showcase_images/img4.jpeg',
+      './images/showcase_images/img5.jpeg',
+      './images/showcase_images/img6.jpeg',
+      './images/showcase_images/img7.jpeg',
+      './images/showcase_images/img8.jpeg',
+  ]
+
+  const sub_array_1 = display_images.slice(0,4);
+  const sub_array_2 = display_images.slice(3,display_images.length-1)
+
 
     return (
         <div className="container-fluid d-flex justify-content-center my-4" id="section-main">
@@ -93,7 +107,7 @@ function SearchSection(props) {
                         <div className="col-md-2 border-right">
 
                             {/* Filters */}
-                            <div class="accordion" id="filteraccordion">
+                            <div className="accordion" id="filteraccordion">
                                 <div className="row p-1">
                                     <div className="col p-2 d-flex justify-content-start align-items-center" >
                                         <div className="font-weight-bold" >
@@ -108,7 +122,7 @@ function SearchSection(props) {
                                          </div>
                                     </div>
                                 </div>
-                                <div id="collapseFilter" class="collapse mt-2" data-parent="#filteraccordion">
+                                <div id="collapseFilter" className="collapse mt-2" data-parent="#filteraccordion">
                                     <div>
                                         <FormControlLabel
                                             control={
@@ -200,7 +214,7 @@ function SearchSection(props) {
                                         </div>
                                     </div>
                                 </div>
-                                <div id="collapseOccasion" class="collapse  mt-2"  data-parent="#occasionAccordion">
+                                <div id="collapseOccasion" className="collapse  mt-2"  data-parent="#occasionAccordion">
                                     <div>
                                         <FormControlLabel
                                             control={
@@ -270,33 +284,23 @@ function SearchSection(props) {
                             <div className="card-section">
 
                                 <div className="row mt-4">
-                                    <div className="col-md-3 mb-md-0 mb-3">
-                                        <ItemCard usage={'mainPart'}/>
-                                    </div>
-                                    <div className="col-md-3 mb-md-0 mb-3">
-                                        <ItemCard usage={'mainPart'}/>
-                                    </div>
-                                    <div className="col-md-3 mb-md-0 mb-3">
-                                        <ItemCard usage={'mainPart'}/>
-                                    </div>
-                                    <div className="col-md-3 mb-md-0 mb-3">
-                                        <ItemCard usage={'mainPart'}/>
-                                    </div>
+                                    {
+                                        sub_array_1.map((item)=>(
+                                            <div className="col-md-3 mb-md-0 mb-3">
+                                                <ItemCard usage={'mainPart'} image={item}/>
+                                            </div>
+                                        ))
+                                    }
                                 </div>
 
                                 <div className="row mt-3">
-                                    <div className="col-md-3 mb-md-0 mb-3">
-                                        <ItemCard usage={'mainPart'}/>
-                                    </div>
-                                    <div className="col-md-3 mb-md-0 mb-3">
-                                        <ItemCard usage={'mainPart'}/>
-                                    </div>
-                                    <div className="col-md-3 mb-md-0 mb-3">
-                                        <ItemCard usage={'mainPart'}/>
-                                    </div>
-                                    <div className="col-md-3 mb-md-0 mb-3">
-                                        <ItemCard usage={'mainPart'}/>
-                                    </div>
+                                    {
+                                        sub_array_2.map((item)=>(
+                                            <div className="col-md-3 mb-md-0 mb-3">
+                                                <ItemCard usage={'mainPart'} image={item}/>
+                                            </div>
+                                        ))
+                                    }
                                 </div>
 
                             </div>
